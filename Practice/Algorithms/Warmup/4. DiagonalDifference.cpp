@@ -7,8 +7,8 @@ vector<string> split(const string &);
 
 int diagonalDifference(vector<vector<int>> arr) {
     vector<int> sum(2);
-    
     int row = 0, size = arr.size();
+    
     for (int i = 0; i < size; i++) {
         sum[0] += arr[row][i];
         sum[1] += arr[row][size - i - 1];
