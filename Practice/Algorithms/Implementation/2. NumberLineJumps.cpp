@@ -4,7 +4,7 @@ using namespace std;
 vector<string> split_string(string);
 
 string kangaroo(int x1, int v1, int x2, int v2) {
-    while(x2 >= x1)
+    while (x2 >= x1)
         if (x1 == x2)
             return "YES";
         else
