@@ -15,7 +15,7 @@ const valarray<int> magicSquares[] = {
 int formingMagicSquare(vector<vector<int>> s) {
     valarray<int> broken(9);
     for (int i = 0; i < 9; i++)
-        broken[i] = s[i/3][i%3];
+        broken[i] = s[i / 3][i % 3];
     
     int cost(99);
     for (auto &i : magicSquares)
