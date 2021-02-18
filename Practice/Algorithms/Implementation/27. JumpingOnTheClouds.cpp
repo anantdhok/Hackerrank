@@ -5,10 +5,12 @@ vector<string> split_string(string);
 
 int jumpingOnClouds(vector<int> c, int k) {
     int i = 0, energy = 100;
+    
     do {
         i = (i + k) % c.size();
         energy -= c[i] * 2 + 1;
     } while (i != 0);
+    
     return energy;
 }
 
