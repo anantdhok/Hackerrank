@@ -8,10 +8,12 @@ vector<int> circularArrayRotation(vector<int> a, int k, vector<int> queries) {
     vector<int> rotated(n);
     vector<int> results(queries.size());
     k = k % n;
+    
     for (int i = 0; i < n; i++)
         rotated[i] = a[(i + (n - k)) % n];
     for (int i: queries)
         results[c++] = rotated[i];
+    
     return results;
 }
 
