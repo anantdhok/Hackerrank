@@ -5,9 +5,11 @@ vector<string> split_string(string);
 
 int designerPdfViewer(vector<int> h, string word) {
     int height = 0;
+    
     for (const char &c: word)
         if (height < h[c - 'a'])
             height = h[c - 'a'];
+    
     return height*word.length();
 }
 
