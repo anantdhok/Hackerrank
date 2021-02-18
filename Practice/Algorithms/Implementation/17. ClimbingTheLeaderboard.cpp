@@ -7,6 +7,7 @@ vector<string> split(const string &);
 
 int binarySearch(vector<vector<int>> &ranks, int &size, int &data) {
     int l = 0, r = size - 1, m;
+    
     while (l <= r) {
         m = (l + r) / 2;
         if (data == ranks[m][0])
@@ -16,6 +17,7 @@ int binarySearch(vector<vector<int>> &ranks, int &size, int &data) {
         else
             l = m + 1;
     }
+    
     return m;
 }
 
