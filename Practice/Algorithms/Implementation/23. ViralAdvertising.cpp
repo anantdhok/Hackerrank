@@ -3,10 +3,12 @@ using namespace std;
 
 int viralAdvertising(int n) {
     int recipients = 5, likes = 0;
+    
     for (int i = n; i > 0; i--) {
         likes += floor(recipients / 2);
         recipients = 3 * floor(recipients / 2);
     }
+    
     return likes;
 }
 
