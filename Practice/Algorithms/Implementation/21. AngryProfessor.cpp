@@ -6,10 +6,12 @@ vector<string> split_string(string);
 string angryProfessor(int k, vector<int> a) {
     if (k > a.size())
         return "YES";
+    
     int attendance = 0;
     for (int i: a)
         if (i <= 0)
             attendance++;
+    
     return (k > attendance) ? "YES" : "NO";
 }
 
