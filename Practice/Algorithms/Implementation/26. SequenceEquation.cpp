@@ -10,8 +10,10 @@ int getIndex(vector<int> v, int d) {
 
 vector<int> permutationEquation(vector<int> p) {
     vector<int> r;
+    
     for (int i = 1; i <= p.size(); i++)
         r.push_back(getIndex(p, getIndex(p, i) + 1) + 1);
+    
     return r;
 }
 
