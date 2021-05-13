@@ -6,8 +6,8 @@ This repository contains my solved soultions for Hackerrank problems.
 ## Features
 
 * Algorithms
-** Warmup
-** Implementation
+  * Warmup
+  * Implementation
 * Data Structures
 
 
