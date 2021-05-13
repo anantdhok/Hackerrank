@@ -1,6 +1,6 @@
 # Hackerrank
 
-This repository contains my solved soultions for Hackerrank problems.
+This repository contains my solved solutions for Hackerrank problems.
 
 
 ## Features
