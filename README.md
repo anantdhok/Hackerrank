@@ -5,10 +5,10 @@ This repository contains my solved soultions for Hackerrank problems.
 
 ## Features
 
-- Algorithms
-* Warmup
-* Implementation
-- Data Structures
+* Algorithms
+** Warmup
+** Implementation
+* Data Structures
 
 
 ## Requirement
