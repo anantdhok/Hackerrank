@@ -22,7 +22,6 @@ function readLine() {
     return inputString[currentLine++];
 }
 
-
 function vowelsAndConsonants(s) {
     let vowels = ["a", "e", "i", "o", "u"];
 
