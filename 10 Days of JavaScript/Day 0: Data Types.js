@@ -22,7 +22,6 @@ function readLine() {
     return inputString[currentLine++];
 }
 
-
 function performOperation(secondInteger, secondDecimal, secondString) {
     const firstInteger = 4;
     const firstDecimal = 4.0;
@@ -32,7 +31,6 @@ function performOperation(secondInteger, secondDecimal, secondString) {
     console.log(firstDecimal + parseFloat(secondDecimal));
     console.log(firstString + secondString);
 }
-
 
 function main() {
     const secondInteger = readLine();
