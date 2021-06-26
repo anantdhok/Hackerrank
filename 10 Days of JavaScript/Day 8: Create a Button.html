@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #btn {
+                width: 96px;
+                height: 48px;
+                font-size: 24px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <script type="text/javascript">
+            var countButton = document.createElement("button");
+            countButton.id = 'btn';
+            countButton.innerHTML = 0;
+            document.body.appendChild(countButton);
+
+            countButton.onclick = function() {
+                countButton.innerHTML = parseInt(countButton.innerHTML) + 1;
+            };
+        </script>
+    </body>
+</html>
