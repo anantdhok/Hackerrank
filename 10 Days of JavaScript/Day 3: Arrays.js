@@ -27,3 +27,10 @@ function getSecondLargest(nums) {
     list.sort(function(a, b){ return b - a })
     return list[1];
 }
+
+function main() {
+    const n = +(readLine());
+    const nums = readLine().split(' ').map(Number);
+    
+    console.log(getSecondLargest(nums));
+}
