@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                width: 33%;
+            }
+
+            #res {
+                background-color: lightgray;
+                border: solid;
+                width: 100%;
+                height: 48px;
+                font-size: 20px;
+            }
+
+            #btns {
+                width: 100%;
+            }
+
+            #btn0, #btn1 {
+                background-color: lightgreen;
+                color: brown;
+            }
+
+            #btnClr, #btnEql {
+                background-color: darkgreen;
+                color: white;
+            }
+
+            #btnSum, #btnSub, #btnMul, #btnDiv {
+                background-color: black;
+                color: red;
+            }
+
+            .button {
+                width: 25%;
+                height: 36px;
+                font-size: 18px;
+                margin: 0px;
+                float: left;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id='res' class='resultContainer'></div>
+        <div id='btns' class='buttonContainer'>
+            <button id='btn0' class='button'>0</button>
+            <button id='btn1' class='button'>1</button>
+            <button id='btnClr' class='button'>C</button>
+            <button id='btnEql' class='button'>=</button>
+            <button id='btnSum' class='button'>+</button>
+            <button id='btnSub' class='button'>-</button>
+            <button id='btnMul' class='button'>*</button>
+            <button id='btnDiv' class='button'>/</button>
+        </div>
+        
+        <script type="text/javascript">
+            function buttonAction(e) {
+                var btn = e.target || e.srcElement;
+                var res = document.getElementById('res');
+                var action = document.getElementById(btn.id).innerHTML;
+
+                switch(action) {
+                    case 'C':
+                        res.innerHTML = '';
+                        break;
+                    case '=':
+                        var expr = res.innerHTML;
+                        var nums = /(\d+)/g;
+
+                        expr = expr.replace(nums, function(match) {
+                            return parseInt(match, 2);
+                        })
+
+                        res.innerHTML = eval(expr).toString(2);
+                        break;
+                    default:
+                        res.innerHTML += action;
+                        break;
+                }
+            }
+
+            var buttons = document.getElementsByTagName('button');
+            for (let button of buttons)
+                button.onclick = buttonAction;
+
+            document.getElementById('btn0').onclick = buttonAction;
+            document.getElementById('btn1').onclick = buttonAction;
+            document.getElementById('btnClr').onclick = buttonAction;
+            document.getElementById('btnEql').onclick = buttonAction;
+            document.getElementById('btnSum').onclick = buttonAction;
+            document.getElementById('btnSub').onclick = buttonAction;
+            document.getElementById('btnMul').onclick = buttonAction;
+            document.getElementById('btnDiv').onclick = buttonAction;
+        </script>
+    </body>
+</html>
