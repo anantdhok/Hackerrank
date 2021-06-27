@@ -13,6 +13,8 @@ This repository contains my solved solutions for Hackerrank problems.
 
 ## Requirement
 - C++
+- JavaScript
+- HTML
 
 
 ## Contribute
